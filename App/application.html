@@ -1,0 +1,107 @@
+<html>
+<head>
+  <title>Home</title>
+  <link rel = "stylesheet" href =
+"https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cyborg/bootstrap.min.css"/>
+  <link rel = "stylesheet" href = "stylesheet.css/">
+
+<!-- FUNCTIONS -->
+<script>
+  function submitEntry() {
+    var enteredText = document.getElementById('logText').value;
+    var date = new Date().toLocaleDateString();
+    document.getElementById("mostRecentEntryText").innerHTML = enteredText;
+    document.getElementById("mostRecentEntryTextDate").innerHTML = date;
+  }
+
+</script>
+</head>
+  <body>
+    <!-- If time: We might want to find a way to have the nav stay on screen even after scrolling -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="../Home/index.html">Daily Discoveries</a>
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#Graphs">Graphs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#History">History</a>
+      </li>
+    </ul>
+    <!-- <form class="form-inline my-2 my-lg-0">
+    </form> -->
+    <li class="nav-item">
+      <a class="nav-link" href="../Home/index.html">Log Out</a>
+    </li>
+  </div>
+</nav>
+
+<div style="height: 100%">
+  <div style="margin-left: 15%; margin-right: 15%; margin-top: 5%;">
+    <div class="jumbotron">
+      <br>
+      <h1 class="display-3" align="center">Hello! </h1>
+      <br>
+      <h1 align="center">Welcome to Daily Discoveries</h1>
+      <h3 align="center">What did you do today?</h3>
+        <div class="form-group">
+              <textarea class="form-control" id="logText" rows="3" placeholder="Type here! Tell us as much or as little as you want to; whatever you think is important can be important."></textarea>
+        </div>
+        <!-- MAY LOOK BETTER RIGHT ALIGNED -->
+        <button type="button" class="btn btn-outline-success" onclick="submitEntry()">I'm done!</button>
+    </div>
+  </div>
+
+  <!-- THIS NEEDS TO BE CENTERED-->
+  <div align="center">
+    <button type="button" class="btn btn-outline-success" onclick="window.location.href = '#Graphs'">View your graphs &#8595; </button>
+  </div>
+</div>
+
+<div id="Graphs" style="margin-left: 2.5em">
+  <h3><u>Your Graphs</u></h3>
+</div>
+  <div class="card border-success mb-3" style="max-width: 80%; margin-left: 10%;">
+    <div class="card-header">Learning Type</div>
+    <div class="card-body">
+      <h4 class="card-title">GRAPH PLACEHOLDER</h4>
+    </div>
+  </div>
+
+  <div class="card border-success mb-3" style="max-width: 80%; margin-left: 10%;">
+    <div class="card-header">Activity</div>
+    <div class="card-body">
+      <h4 class="card-title">GRAPH PLACEHOLDER</h4>
+    </div>
+  </div>
+</div>
+
+<div id="History" style="margin-left: 2.5em">
+  <h3><u>Previous Submissions</u></h3>
+</div>
+  <div class="card border-success mb-3" style="max-width: 80%; margin-left: 10%;">
+    <div class="card-header" id="mostRecentEntryTextDate">[Date 1]</div>
+    <div class="card-body">
+      <p class="card-text" id="mostRecentEntryText">WRITTEN ON DATE 1</p>
+    </div>
+  </div>
+
+  <div class="card border-success mb-3" style="max-width: 80%; margin-left: 10%;">
+    <div class="card-header">[Date 1]</div>
+    <div class="card-body">
+      <p class="card-text">WRITTEN ON DATE 1</p>
+    </div>
+  </div>
+</div>
+
+<div align="center">
+  <h4>That's everything for now! Your log will grow over time.</h4>
+</div>
+
+<div style="background-color:silver;">
+  <p align="right"> Daily Discoveries - MVHacks 2019 - Developed by: Aryan, Tarang, Ryan, and Tanay</p>
+</div>
+    </body>
+</html>

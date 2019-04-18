@@ -1,0 +1,63 @@
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cyborg/bootstrap.min.css"/>
+  <link rel = "stylesheet" href = "stylesheet.css">
+  <script>
+  function authentication(){
+    var id = document.getElementById("email").value;
+    var pw = document.getElementById("password").value;
+    /* THIS LOGIN WILL ALWAYS BE SUCCESSFUL
+     * IT SHOULDN'T ALWAYS BE SUCCESSFUL
+     * In the interest of time, however, we have chosen to focus more
+     * on our actual webapp and not the authentication or account creation process
+     * This function will ALWAYS BE SUCCESSFUL, HOWEVER in actual practice it should not.
+     */
+    var username1 = "test";
+    var password1 = "test";
+    if (id == username1 && pw == password1){
+      return "true";
+    }
+    else{
+      return "false";
+    }
+}
+
+    function signAttempt() {
+      if (authentication() == "true"){
+        window.open("../App/application.html");
+      }
+
+    }
+
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="../Home/index.html">Daily Discoveries</a>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+      </ul>
+    </div>
+  </nav>
+
+  <div align = "center">
+    <h1>Hi! Welcome to Daily Discoveries</h1>
+  </div>
+
+  <h3 align = "center">Login here:</h3>
+  <div class="form-group" align = "center">
+      <textarea class="form-control" id="email" rows="1" placeholder="Username" style="max-width: 15em"></textarea>
+    </div>
+    <div class="form-group" align = "center">
+        <textarea class="form-control" id="password" rows="1" placeholder="Password" style="max-width: 15em"></textarea>
+      </div>
+       <div id="placeOrder"
+   style="text-align: center; width: 100%;">
+       <button type="button" class="btn btn-outline-success" style="margin-top: 1%;" onclick="signAttempt()">Log in</button>
+</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "daily-discoveries",
+  "version": "1.0.0",
+  "description": "MVHacks 2019",
+  "main": "/Home/index.html",
+  "scripts": {
+    "start": "src/index.html"
+  },
+  "dependencies": {
+    "chart.js": "^2.8.0",
+    "curl-request": "^1.1.1",
+    "watson-developer-cloud": "^4.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TanayB11/DailyDiscoveries"
+  },
+  "author": "Tanay Biradar"
+}
