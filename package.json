@@ -7,7 +7,7 @@
     "start": "src/index.html"
   },
   "dependencies": {
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "curl-request": "^1.1.1",
     "watson-developer-cloud": "^4.0.1"
   },
